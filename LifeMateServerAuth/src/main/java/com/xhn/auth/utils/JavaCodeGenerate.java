@@ -52,7 +52,7 @@ public class JavaCodeGenerate {
                                 .pathInfo(Collections.singletonMap(OutputFile.xml, moduleRoot+"/src/main/resources/mapper"))// 设置mapperXml生成路径
                 )
                 .strategyConfig(builder ->
-                        builder.addInclude(String.valueOf(tableName)) // 设置需要生成的表名
+                        builder
                                 .addTablePrefix("auth_") // 设置过滤表前缀
                                 .entityBuilder()
                                 .formatFileName("%sEntity") // 设置实体类文件名格式
